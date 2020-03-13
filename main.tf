@@ -14,9 +14,10 @@ locals {
 
   tags = merge(
     {
-      "Name"      = local.id
-      "Namespace" = local.namespace
-      "Stage"     = local.stage
+      "Name"       = local.id
+      "Namespace"  = local.namespace
+      "Stage"      = local.stage
+      "Managed By" = "terraform"
     },
     var.tags
   )
